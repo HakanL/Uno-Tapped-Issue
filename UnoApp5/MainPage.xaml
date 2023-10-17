@@ -1,0 +1,28 @@
+<Page x:Class="UnoApp5.MainPage"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:local="using:UnoApp5"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	Background="{ThemeResource BackgroundBrush}">
+
+	<StackPanel HorizontalAlignment="Center"
+				VerticalAlignment="Center">
+		<TextBlock AutomationProperties.AutomationId="HelloTextBlock"
+					Text="Hello Uno Platform" 
+					HorizontalAlignment="Center" />
+
+        <ListViewItem IsTabStop="True" Tapped="Item_Tapped" IsTapEnabled="True">
+            <Grid Height="36">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="Key 1" VerticalAlignment="Center" />
+                <TextBlock Grid.Column="1" Text="Value 1" VerticalAlignment="Center"  />
+            </Grid>
+        </ListViewItem>
+
+    </StackPanel>
+</Page>
